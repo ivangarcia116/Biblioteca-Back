@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: biblioteca
+  
+  # CONFIGURACIÓN DE LA BASE DE DATOS
+  datasource:
+    url: jdbc:mysql://localhost:3306/biblioteca_db?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: root
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # CONFIGURACIÓN DE JPA / HIBERNATE
+  jpa:
+    hibernate:
+      # 'update' crea las tablas automáticamente si no existen
+      ddl-auto: update
+    show-sql: true # Esto te mostrará en la consola de Eclipse las consultas SQL que hace Spring
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
